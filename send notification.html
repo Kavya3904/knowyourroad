@@ -1,0 +1,30 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'aindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="sendnnotificationcode">
+  &nbsp;
+
+<table width="200" border="1" class="table table-hover">
+  <tbody>
+    <tr>
+      <td>&nbsp;Notification:</td>&nbsp; &nbsp;
+      <td>
+      <textarea name="textarea" required pattern="[A-Z a-z.]{3,25}" cols="100"></textarea></td>
+    </tr>
+   <tr>
+	   <td colspan="2">
+	  <center><input type="submit" name="submit" id="button" value="Send"></center></td>
+	   </tr>
+  </tbody>
+</table>
+
+    </form>
+</body>
+{% endblock %}
+

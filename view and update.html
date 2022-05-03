@@ -1,0 +1,70 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'tindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="viewtrafficdata">
+  <table width="200" border="1" class="table table-hover">
+    <tbody>
+      <tr>
+        <td>&nbsp;First Name :</td>
+        <td>
+        <input type="text" name="textfield" required pattern="[A-Z a-z.]{3,25}" id="textfield" value="{{val[2]}}"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Last Name :</td>
+        <td>
+        <input type="text" name="textfield2" required pattern="[A-Z a-z.]{3,25}" id="textfield2" value="{{val[3]}} "></td>
+      </tr>
+      <tr>
+        <td>&nbsp;DOB :&nbsp;</td>
+        <td>
+        <input type="text" name="date" required id="date" value="{{val[4]}}"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Gender :</td>
+        <td><input type="radio" name="radio" checked id="radio" value="male" {% if val[5]=='male' %} checked {% endif %}>
+        <label for="radio">Male&nbsp; </label>
+          <input type="radio" name="radio" id="radio2" value="female"  {% if val[5]=='female' %} checked {% endif %}>
+			<label for="radio">Female&nbsp; </label>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;Place :</td>
+        <td>
+        <textarea name="textarea" id="textarea" required pattern="[A-Z a-z.]{3,25}" >{{val[6]}} </textarea></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Post :</td>
+        <td>
+        <input type="text" name="textfield3" required pattern="[A-Z a-z.]{3,25}" id="textfield3" value="{{val[7]}} "></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Pin :</td>
+        <td>
+        <input type="text" name="number" required pattern="[0-9]{6}" id="number" value="{{val[8]}} "></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Email :</td>
+        <td>
+        <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  id="email" value="{{val[9]}} "></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Phone:</td>
+        <td>
+        <input type="text" name="number2" required  pattern="[6789][0-9]{9}" id="number2" value="{{val[10]}} "></td>
+      </tr>
+    
+      <tr>
+        <td colspan="2"><input type="submit" name="submit" id="submit" value="update"></td>
+      </tr>
+    </tbody>
+  </table>
+  &nbsp;
+</form>
+</body>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+
+{% extends 'tindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" enctype="multipart/form-data" method="post" action="addingviolationreport">
+  <table width="200" border="1" class="table table-hover">
+    <tbody>
+      <tr>
+        <td>&nbsp;Report</td>
+        <td><label for="fileField"></label>
+        <input type="file" name="fileField" required id="fileField"  ></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Description</td>
+        <td><label for="textarea"></label>
+        <textarea name="textarea"  required pattern="[A-Z a-z.]{3,25}"id="textarea"></textarea></td>
+      </tr>
+      <tr >
+        <td colspan="2" align="center"><input type="submit" name="button" id="button" value="Send"></td>
+
+      </tr>
+    </tbody>
+  </table>
+  &nbsp;
+</form>
+</body>
+{% endblock %}

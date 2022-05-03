@@ -1,0 +1,33 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+
+{% extends 'aindex.html' %}
+{% block body %}
+<body>
+<form><table width="200" border="1" class="table table-hover">
+  <tbody>
+    <tr>
+      <td><p>Traffic Police
+		  Details</p>
+        <p></p></td>
+      <td>Report</td>
+      <td>Description</td>
+      <td>Date</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[5]}} {{i[6]}} <br> {{i[7]}} <br>{{i[8]}}</td>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</form>
+</body>
+{% endblock %}

@@ -1,0 +1,38 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'tindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="addviolation">
+  <table width="200" border="1" class="table table-hover">
+    <tbody>
+
+      <tr>
+        <td>&nbsp;Report</td>
+        <td>&nbsp;Description</td>
+        <td>Dtae&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+          {% for i in val %}
+
+      <tr>
+        <td><img src="../static/report/{{i[2]}}" width="100px" height="100px"/></td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+        <td><p><a href="editviolation?id={{i[0]}}" id ="editviolation">Edit</a></p>
+        <p><a href="deletingviolation?id={{i[0]}}">Delete</a></p></td>
+      </tr>
+     {% endfor %}
+
+    </tbody>
+  </table>
+	<center><input type="submit" name="button" id="button" value="Add" ></center>
+  &nbsp;
+</form>
+
+</body>
+{% endblock %}

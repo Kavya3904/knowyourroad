@@ -1,0 +1,79 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+</head>
+{% extends 'index.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="RegisteringTraficpolice">
+  <table width="200" border="1" class="table table-hover">
+    <tbody>
+      <tr>
+        <td>&nbsp;First Name :</td>
+        <td>
+        <input type="text" name="textfield" id="textfield" required pattern="[A-Z a-z.]{3,25}"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Last Name :</td>
+        <td>
+        <input type="text" name="textfield2" id="textfield2" required pattern="[A-Z a-z.]{1,25}"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;DOB :&nbsp;</td>
+        <td>
+        <input type="date" name="date" id="date" required ></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Gender :</td>
+        <td><input type="radio" name="radio" checked id="radio" value="Male">
+        <label for="radio">Male&nbsp; </label>
+          <input type="radio" name="radio" id="radio2" value="Female">
+			<label for="radio">Female&nbsp; </label>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;Place :</td>
+        <td>
+        <textarea name="textarea" id="textarea" required pattern="[A-Z a-z.]{3,25}"></textarea></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Post :</td>
+        <td>
+        <input type="text" name="textfield3" id="textfield3" required  pattern="[A-Z a-z.]{3,25}"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Pin :</td>
+        <td>
+        <input type="number" name="number" id="number" required pattern="[0-9]{6}"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Email :</td>
+        <td>
+        <input type="email" name="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" ></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Phone:</td>
+        <td>
+        <input type="number" name="number2" id="number2" required  pattern="[6789][0-9]{9}"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Username :</td>
+        <td>
+        <input type="text" name="textfield4" id="textfield4" required pattern="[A-Z a-z.]{3,25}" ></td>
+      </tr>
+      <tr>
+        <td>&nbsp;Password :</td>
+        <td>
+        <input type="password" name="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" ></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><input type="submit" name="submit" id="submit" value="Register" ><td>
+      </tr>
+    </tbody>
+  </table>
+  &nbsp;
+</form>
+</body>
+{% endblock %}

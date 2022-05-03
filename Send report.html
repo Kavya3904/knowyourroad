@@ -1,0 +1,32 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'aindex.html' %}
+{% block body %}
+<body>
+<form><table width="200" border="1" class="table table-hover">
+  <tbody>
+    <tr>
+      <td><p>Complaint&nbsp;</p>
+        <p></p></td>
+      <td>User Upload Image&nbsp;</td>
+      <td>Date&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[1]}}</td>
+      <td><img src="static/uploads/{{i[2]}}" width="100px" height="100px"/>  </td>
+      <td>{{i[3]}}</td>
+      <td><a href="/updatestatus?id={{i[0]}}">Update status</a></td>
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+</form>
+</body>
+
+{% endblock %}

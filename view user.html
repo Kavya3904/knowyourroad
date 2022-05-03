@@ -1,0 +1,36 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'aindex.html' %}
+{% block body %}
+<body>
+<form name="form1" method="post">
+  &nbsp;
+</form>
+<table width="200" border="1" class="table table-hover">
+  <tbody>
+    <tr>
+      <td>&nbsp;Name</td>
+      <td>&nbsp;DOB</td>
+      <td>Gender&nbsp;</td>
+      <td>&nbsp;Address</td>
+      <td>Email&nbsp;</td>
+      <td>Phone&nbsp;</td>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[2]}} {{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[6]}} {{i[7]}} {{i[8]}}</td>
+      <td>{{i[9]}}</td>
+      <td>{{i[10]}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</body>
+{% endblock %}

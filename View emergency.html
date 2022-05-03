@@ -1,0 +1,31 @@
+<!--<!doctype html>-->
+<!--<html>-->
+<!--<head>-->
+<!--<meta charset="utf-8">-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+{% extends 'tindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" class="table table-hover">
+    <tbody>
+
+      <tr>
+        <td>&nbsp;User Name</td>
+        <td>&nbsp;Phone</td>
+        <td>&nbsp;</td>
+      </tr>
+      {% for i in val %}
+      <tr>
+        <td>{{i[0]}} {{i[1]}}</td>
+        <td>{{i[2]}}</td>
+        <td><a href="https://www.google.com/maps?q={{i[3]}},{{i[4]}}">Track</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  &nbsp;
+</form>
+</body>
+{% endblock %}
